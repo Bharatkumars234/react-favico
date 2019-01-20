@@ -5,13 +5,13 @@ import * as React from 'react';
 
 // Original options that can be passed to favico.js instance
 interface FavicoJsOptions {
-  bgColor?: string;
-  textColor?: string;
+  bgColor?: string; // @todo HEX
+  textColor?: string; // @todo HEX
   fontFamily?: string;
   fontStyle?: string;
-  type?: string;
-  position?: string;
-  animation?: string;
+  type?: string; // @todo Add enum
+  position?: string; // @todo Add enum
+  animation?: string; // @todo Add enum
   elementId?: string;
   element?: HTMLElement;
   dataUrl?: (url: string) => any;
