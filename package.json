@@ -8,15 +8,15 @@
     "build:dev": "NODE_ENV=development parcel build src/Favico.tsx",
     "watch": "NODE_ENV=development parcel src/Favico.tsx",
     "example": "parcel example/index.html --open",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "tsc --noEmit --watch",
+    "typeCheck": "tsc --noEmit",
+    "typeCheck:watch": "tsc --noEmit --watch",
     "test": "jest",
     "prettier": "prettier --write '**/*.{js,ts,tsx}'",
     "lint:js": "eslint **/*.{js,jsx}",
     "lint:ts": "tslint **/*.{ts,tsx}",
     "lint": "npm run lint:js && npm run lint:ts",
     "measure": "gzip -c dist/Favico.js | wc -c",
-    "prepublishOnly": "npm run type-check && npm run lint && npm run prettier && npm run build:prod"
+    "prepublishOnly": "npm run typeCheck && npm run lint && npm run prettier && npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -54,14 +54,12 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "type-check",
-      "lint:ts --fix",
+      "tslint --fix",
       "prettier --write",
       "git add"
     ],
     "**/*.{js,jsx}": [
-      "type-check",
-      "lint:js --fix",
+      "eslint --fix",
       "prettier --write",
       "git add"
     ]
