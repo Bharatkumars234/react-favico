@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import * as React from 'react';
 import {FavicoProps} from './types';
 
 /**
@@ -6,7 +6,7 @@ import {FavicoProps} from './types';
  * @classdesc React wrapper around favico.js
  * @see https://github.com/ejci/favico.js
  */
-export default class Favico extends Component<FavicoProps> {
+export default class Favico extends React.Component<FavicoProps> {
   constructor(props: FavicoProps) {
     super(props);
   }

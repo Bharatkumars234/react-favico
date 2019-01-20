@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "main": "dist/Favico.js",
   "scripts": {
-    "build": "parcel build src/Favico.tsx",
+    "build:prod": "NODE_ENV=production parcel build src/Favico.tsx",
+    "build:dev": "NODE_ENV=development parcel build src/Favico.tsx",
+    "watch": "NODE_ENV=development parcel src/Favico.tsx",
     "example": "parcel example/index.html --open",
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
@@ -14,7 +16,7 @@
     "lint:ts": "tslint **/*.{ts,tsx}",
     "lint": "npm run lint:js && npm run lint:ts",
     "measure": "gzip -c dist/Favico.js | wc -c",
-    "prepublishOnly": "npm run prettier && npm run lint && npm run build"
+    "prepublishOnly": "npm run type-check && npm run lint && npm run prettier && npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -42,6 +44,8 @@
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "parcel-bundler": "^1.10.3",
+    "parcel-plugin-typed-css-modules": "^1.1.0",
+    "postcss-modules": "^1.4.1",
     "prettier": "^1.16.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
@@ -50,11 +54,13 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
+      "type-check",
       "lint:ts --fix",
       "prettier --write",
       "git add"
     ],
     "**/*.{js,jsx}": [
+      "type-check",
       "lint:js --fix",
       "prettier --write",
       "git add"
