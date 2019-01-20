@@ -24,3 +24,4 @@ npm run example
 [ ] Add `types` in package.json
 [ ] Check `type-check` commands
 [ ] Check if react-dom isn't bundled in react-favico
+[ ] Add size limit

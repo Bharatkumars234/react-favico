@@ -3,9 +3,11 @@
   "description": "React wrapper for favico.js (https://github.com/ejci/favico.js)",
   "version": "1.0.0",
   "main": "dist/Favico.js",
+  "typings": "src/Favico.d.ts",
   "scripts": {
     "build:prod": "NODE_ENV=production parcel build src/Favico.tsx",
     "build:dev": "NODE_ENV=development parcel build src/Favico.tsx",
+    "generateTypes": "tsc --declaration src/Favico.tsx",
     "watch": "NODE_ENV=development parcel src/Favico.tsx",
     "example": "parcel example/index.html --open",
     "typeCheck": "tsc --noEmit",

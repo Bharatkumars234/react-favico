@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Favico from '../src/Favico';
 import * as css from './App.css';
 import Button from './Button';
 
@@ -15,6 +16,7 @@ export default class App extends React.Component<
   render() {
     return (
       <div className={css.container}>
+        <Favico counter={this.state.counter} />
         <h1 className={css.title}>react-favico</h1>
         <h3 className={css.title}>
           {`Current counter is: ${this.state.counter}`}
