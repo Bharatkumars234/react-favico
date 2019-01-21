@@ -16,13 +16,15 @@ export default class Favico extends React.Component<FavicoProps> {
   }
 
   componentDidMount() {
-    // @todo Implement props checking
-    this.favico.badge(this.props.counter);
+    const {counter, ...other} = this.props;
+
+    this.favico.badge(counter, other);
   }
 
   componentDidUpdate(prevProps: FavicoProps) {
-    // @todo Implement mapping between props
-    this.favico.badge(this.props.counter);
+    const {counter, ...other} = this.props;
+
+    this.favico.badge(counter, other);
   }
 
   render() {
