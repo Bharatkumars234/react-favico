@@ -1,36 +1,6 @@
 import Favico from 'favico.js';
 import * as React from 'react';
-
-// @todo Move all interfaces to types.js
-
-// Original options that can be passed to favico.js instance
-interface FavicoJsOptions {
-  bgColor?: string; // @todo HEX
-  textColor?: string; // @todo HEX
-  fontFamily?: string;
-  fontStyle?: string;
-  type?: string; // @todo Add enum
-  position?: string; // @todo Add enum
-  animation?: string; // @todo Add enum
-  elementId?: string;
-  element?: HTMLElement;
-  dataUrl?: (url: string) => any;
-}
-
-// Methods from original favico.js library
-interface FavicoJs {
-  badge(count: number, animation?: string): void;
-  badge(count: number, opts: FavicoJsOptions): void;
-  reset(): void;
-  image(imageElement: HTMLElement): void;
-  video(imageElement: HTMLElement): void;
-  webcam(): void;
-}
-
-// Interface for react component props
-interface FavicoProps extends FavicoJsOptions {
-  counter: number;
-}
+import {FavicoProps} from './types';
 
 /**
  * @class Favico
@@ -42,8 +12,6 @@ export default class Favico extends React.Component<FavicoProps> {
 
   constructor(props: FavicoProps) {
     super(props);
-
-    // this.favico = new Favico(props.options);
     this.favico = new Favico(props);
   }
 
@@ -52,7 +20,7 @@ export default class Favico extends React.Component<FavicoProps> {
     this.favico.badge(this.props.counter);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps: FavicoProps) {
     // @todo Implement mapping between props
     this.favico.badge(this.props.counter);
   }

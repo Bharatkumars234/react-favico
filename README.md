@@ -25,3 +25,4 @@ npm run example
 [ ] Check `type-check` commands
 [ ] Check if react-dom isn't bundled in react-favico
 [ ] Add size limit
+[ ] Make build on install.
