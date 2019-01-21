@@ -18,7 +18,8 @@
     "lint:ts": "tslint **/*.{ts,tsx}",
     "lint": "npm run lint:js && npm run lint:ts",
     "measure": "gzip -c dist/Favico.js | wc -c",
-    "prepublishOnly": "npm run typeCheck && npm run lint && npm run prettier && npm run build:prod"
+    "prepublishOnly": "npm run typeCheck && npm run lint && npm run prettier && npm run build:prod",
+    "postinstall": "npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,9 @@
   "author": "Pavel Davydov",
   "licence": "MIT",
   "dependencies": {
+    "favico.js": "ejci/favico.js#6a3f430",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "favico.js": "ejci/favico.js#6a3f430"
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
     "@types/react": "^16.4.18",

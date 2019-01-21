@@ -16,7 +16,7 @@ export default class App extends React.Component<
   state = {
     animation: Animation.None,
     counter: 0,
-    position: Position.Up,
+    position: Position.Down,
     type: Type.Circle,
   };
 
@@ -29,9 +29,6 @@ export default class App extends React.Component<
         <p className={css.title}>{`Current icon: ${this.state.type}`}</p>
         <p className={css.title}>
           {`Current animation: ${this.state.animation}`}
-        </p>
-        <p className={css.title}>
-          {`Current position: ${this.state.position}`}
         </p>
         <div className={css.wrapper}>
           <div className={css.item}>
@@ -50,9 +47,6 @@ export default class App extends React.Component<
             <Button onClick={this.handleChangeAnimation}>
               Change animation
             </Button>
-          </div>
-          <div className={css.item}>
-            <Button onClick={this.handleChangePosition}>Change position</Button>
           </div>
         </div>
       </div>
@@ -83,10 +77,10 @@ export default class App extends React.Component<
   };
 
   private handleChangeAnimation = () => {
-    // @todo Implement method
-  };
-
-  private handleChangePosition = () => {
-    // @todo Implement method
+    // As a sulution for non polifilled 'Object.values'
+    const values = Object.keys(Animation).map((key) => Animation[key]);
+    this.setState({
+      animation: values[Math.floor(Math.random() * values.length)],
+    });
   };
 }
