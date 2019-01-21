@@ -13,16 +13,3 @@ npm run build
 ```
 npm run example
 ```
-
-### TODO
-
-[ ] Write react-favico by itself
-[x] Add lint-staged
-[x] Add prettier
-[ ] Add tests (jest)
-[ ] Check `*.min` (production build)
-[ ] Add `types` in package.json
-[ ] Check `type-check` commands
-[ ] Check if react-dom isn't bundled in react-favico
-[ ] Add size limit
-[ ] Make build on install.

@@ -16,7 +16,7 @@
     "lint:js": "eslint **/*.{js,jsx}",
     "lint:ts": "tslint **/*.{ts,tsx}",
     "lint": "npm run lint:js && npm run lint:ts",
-    "measure": "gzip -c dist/Favico.js | wc -c",
+    "size": "size-limit",
     "prepublishOnly": "npm run typeCheck && npm run lint && npm run prettier && npm run build:prod",
     "postinstall": "npm run build:prod"
   },
@@ -49,6 +49,7 @@
     "parcel-plugin-typed-css-modules": "^1.1.0",
     "postcss-modules": "^1.4.1",
     "prettier": "^1.16.0",
+    "size-limit": "^0.21.1",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0",
