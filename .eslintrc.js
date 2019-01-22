@@ -10,4 +10,12 @@ module.exports = {
   parser: 'babel-eslint',
   extends: ['eslint-config-airbnb', 'prettier'],
   plugins: ['react', 'babel'],
+  rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
+    ],
+  },
 };

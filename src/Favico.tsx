@@ -48,7 +48,10 @@ export default class Favico extends React.Component<FavicoProps> {
 
   componentDidUpdate(prevProps: FavicoProps) {
     const {counter, ...other} = this.props;
-    this.favico.badge(counter, other);
+
+    if (!isEqual(this.props, prevProps)) {
+      this.favico.badge(counter, other);
+    }
   }
 
   render() {

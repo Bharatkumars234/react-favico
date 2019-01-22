@@ -13,7 +13,8 @@
     "member-access": [true, "no-public"],
     "interface-name": [true, "never-prefix"],
     "interface-over-type-literal": true,
-    "jsdoc-format": true
+    "jsdoc-format": true,
+    "no-implicit-dependencies": [true, "dev"]
   },
   "rulesDirectory": [],
   "linterOptions": {
