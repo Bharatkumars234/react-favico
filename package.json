@@ -1,5 +1,5 @@
 {
-  "name": "react-favico",
+  "name": "react-favico-js",
   "description": "React wrapper for favico.js (https://github.com/ejci/favico.js)",
   "version": "1.0.0",
   "main": "dist/Favico.js",
