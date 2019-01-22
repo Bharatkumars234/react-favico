@@ -1,6 +1,6 @@
-# react-favico
+# react-favico-js
 
-`react-favico` is just a React wrapper around [favico.js](https://github.com/ejci/favico.js).
+`react-favico-js` is just a React wrapper around [favico.js](https://github.com/ejci/favico.js).
 
 ### How to build
 
