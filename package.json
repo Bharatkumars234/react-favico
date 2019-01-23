@@ -1,12 +1,12 @@
 {
   "name": "react-favico-js",
   "description": "React wrapper for favico.js (https://github.com/ejci/favico.js)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/Favico.js",
   "typings": "dist/Favico.d.ts",
   "scripts": {
-    "build:prod": "NODE_ENV=production tsc --outDir dist --declaration src/Favico.tsx && parcel build src/Favico.tsx",
-    "build:dev": "NODE_ENV=development tsc --outDir dist --declaration src/Favico.tsx && parcel build src/Favico.tsx",
+    "build:prod": "NODE_ENV=production tsc --outDir dist --declaration src/Favico.tsx && parcel build src/Favico.tsx --experimental-scope-hoisting",
+    "build:dev": "NODE_ENV=development tsc --outDir dist --declaration src/Favico.tsx && parcel build src/Favico.tsx --experimental-scope-hoisting",
     "watch": "NODE_ENV=development parcel src/Favico.tsx",
     "example": "parcel example/index.html --open",
     "typeCheck": "tsc --noEmit",
