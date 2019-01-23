@@ -1,7 +1,7 @@
 {
   "name": "react-favico-js",
   "description": "React wrapper for favico.js (https://github.com/ejci/favico.js)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/Favico.js",
   "typings": "dist/Favico.d.ts",
   "scripts": {
@@ -17,8 +17,7 @@
     "lint:ts": "tslint **/*.{ts,tsx}",
     "lint": "npm run lint:js && npm run lint:ts",
     "size": "size-limit",
-    "prepublishOnly": "npm run typeCheck && npm run lint && npm run prettier && npm run build:prod",
-    "postinstall": "npm run build:prod"
+    "prepublishOnly": "npm run typeCheck && npm run lint && npm run prettier && npm run build:prod"
   },
   "repository": {
     "type": "git",

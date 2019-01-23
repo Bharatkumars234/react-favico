@@ -34,7 +34,8 @@ node_modules
 lib
 benchmark_lib
 test-lib
-dist
+dist/index.*
+dist/main.*
 npm
 !flow-typed/npm
 
